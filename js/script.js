@@ -88,23 +88,27 @@ function doSlot() {
         slotTile.className = "a" + (parseInt(slotTile.className.substring(1)) + 1)
     }
 }
-toCash()
+// console.log(cashs[i])
 
 function toCash() {
-    var cashs = document.getElementsByClassName('lbl');
-    var g = document.getElementById('cashsI')
+    let cashs = document.getElementsByClassName('lbl');
+    let g = document.getElementById('cashsI')
 
-    for (var i = 0; i <= cashs.length; i++) {
-        console.log(cashs[i])
+    for (let i = 0; i <= cashs.length; i++) {
 
         cashs[i].onclick = function () {
-            // g.innerHTML = cashs[i]
+
+            g.innerHTML = cashs[i]
+
             console.log(cashs[i])
 
         }
 
     }
+    return cashs[i]
+
 }
+toCash()
 
 function testWin() {
     let slot1 = document.getElementById("slot1").className
